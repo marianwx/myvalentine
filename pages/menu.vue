@@ -1,6 +1,6 @@
 <template>
     <div class="h-screen flex justify-center items-center bg-gradient-to-br from-pink-200 via-rose-100 to-rose-200">
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
         <div v-for="(item, index) in menuItems" :key="index" @click="redirectTo(item.link)" class="relative overflow-hidden rounded-md cursor-pointer">
           <img :src="item.image" alt="Menu item" class="w-full h-auto">
           <div class="absolute inset-0 flex justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 text-white text-lg font-semibold">{{ item.text }}</div>
@@ -29,8 +29,4 @@
     }
   }
   </script>
-  
-  <style scoped>
-  /* Add your custom styling here */
-  </style>
   
