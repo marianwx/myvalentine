@@ -95,7 +95,7 @@
           if (this.currentQuestionIndex < this.questions.length - 1) {
             this.currentQuestionIndex++;
           } else {
-            this.quizCompleted = true; // Set quizCompleted to true when the last question is answered correctly
+            this.quizCompleted = true;
           }
         } else {
           this.showModal = true;
