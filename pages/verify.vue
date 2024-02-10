@@ -7,16 +7,16 @@
       </div>
       <!-- Introduction Section -->
       <div class="w-80 h-80" v-if="!quizStarted">
-        <p class="text-xl font-semibold mb-4">You have to verify yourself!</p>
+        <p class="text-xl text-center font-semibold mb-4">You have to verify yourself!</p>
         <p class="text-base mb-6">To make sure that it's really you, you have to answer some questions, and then you will be granted access.</p>
-        <button @click="startQuiz" class="bg-white text-rose-400 font-semibold p-2 px-6 rounded-md shadow-md hover:shadow-rose-400/60">Verify</button>
+        <div class="flex justify-center"><button @click="startQuiz" class="bg-white text-rose-400 font-semibold p-2 px-6 rounded-md shadow-md hover:shadow-rose-400/60">Verify</button></div>
       </div>
       <!-- Quiz Section -->
       <div class="border-black rounded-lg" v-else>
         <template v-if="!quizCompleted && currentQuestionIndex < questions.length">
           <!-- Question Section -->
           <div>
-            <h2 class="text-2xl font-bold mb-10">{{ questions[currentQuestionIndex].question }}</h2>
+            <h2 class="text-2xl text-center font-bold mb-10">{{ questions[currentQuestionIndex].question }}</h2>
             <div class="grid grid-cols-2 gap-4 justify-items-center">
               <!-- Options -->
               <div v-for="(option, index) in questions[currentQuestionIndex].options" :key="index">
