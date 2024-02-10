@@ -7,9 +7,9 @@
       </div>
       <!-- Introduction Section -->
       <div class="w-80 h-80" v-if="!quizStarted">
-        <p class="text-xl text-center font-semibold mb-4">You have to verify yourself!</p>
-        <p class="text-base mb-6">To make sure that it's really you, you have to answer some questions, and then you will be granted access.</p>
-        <div class="flex justify-center"><button @click="startQuiz" class="bg-white text-rose-400 font-semibold p-2 px-6 rounded-md shadow-md hover:shadow-rose-400/60">Verify</button></div>
+        <p class="text-xl text-center font-semibold mb-4">Vous devez vous vérifier!</p>
+        <p class="text-base mb-6">Pour être sûr qu'il s'agit bien de vous, vous devez répondre à quelques questions, puis l'accès vous sera accordé.</p>
+        <div class="flex justify-center"><button @click="startQuiz" class="bg-white text-rose-400 font-semibold p-2 px-6 rounded-md shadow-md hover:shadow-rose-400/60">Vérifier</button></div>
       </div>
       <!-- Quiz Section -->
       <div class="border-black rounded-lg" v-else>
@@ -27,9 +27,10 @@
         </template>
         <template v-else>
           <!-- Success message -->
-          <div>
-            <p class="text-2xl font-bold">Congratulations! You've successfully completed the quiz.</p>
-            <p class="text-xl mt-4">You are a verified user.</p>
+          <div class="flex flex-col justify-center items-center">
+            <img src="https://cdn-icons-png.flaticon.com/128/5610/5610944.png" alt="Vérifié">
+            <p class="text-xl mt-4 text-rose-400 font-semibold mb-10">Connexion réussie</p>
+            <NuxtLink to="/menu"><button class="bg-white rounded-3xl px-10 py-3 text-rose-400 font-semibold shadow-md hover:shadow-rose-400/60 transition duration-200">On y va</button></NuxtLink>
           </div>
         </template>
       </div>
@@ -72,13 +73,13 @@
             correctAnswer: 'Edi'
           },
           {
-            question: 'Quelle est la date anniversaire de votre relation avec votre amour?',
+            question: 'Quelle est la date anniversaire de ta relation avec Marian?',
             options: ['10 Juillet', '10 Juin', '11 Juillet', '11 Juin'],
             correctAnswer: '10 Juillet'
           },
           {
             question: 'Quelle est la voiture de tes rêves?',
-            options: ['BMW Seria 3', 'Mustang GT', 'AUDI A4 Alb', 'Lamborghini Urus'],
+            options: ['BMW Seria 3', 'Mustang GT', 'AUDI A4 Alb', 'Lambo Urus'],
             correctAnswer: 'AUDI A4 Alb'
           }
         ]
