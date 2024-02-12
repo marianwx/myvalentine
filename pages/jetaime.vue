@@ -70,8 +70,3 @@ export default {
     },
 };
 </script>
-  
-<style>
-/* You can add additional styling if needed */
-</style>
-  

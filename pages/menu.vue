@@ -23,9 +23,9 @@
     data() {
       return {
         items: [
-          { image: 'http://tinyurl.com/4um8ejhu', title: "Lettre d'amour", link: '/letter' },
+          { image: 'http://tinyurl.com/4um8ejhu', title: "Lettre d'amour", link: '/lettre' },
           { image: 'http://tinyurl.com/5ff3z2y7', title: 'Tout commence par une fleur', link: '/moments' },
-          { image: 'http://tinyurl.com/69pwxdaa', title: 'Ça se termine avec nous', link: '/end' }
+          { image: 'http://tinyurl.com/69pwxdaa', title: 'Ça se termine avec nous', link: '/fin' }
         ]
       };
     }
